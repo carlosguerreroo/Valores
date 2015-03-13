@@ -31,6 +31,7 @@
 		FAEBFBFF1AB26AFF00BAF1BD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEBFBFE1AB26AFF00BAF1BD /* libsqlite3.dylib */; };
 		FAEBFC041AB26B8F00BAF1BD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEBFC031AB26B8F00BAF1BD /* FacebookSDK.framework */; };
 		FAEBFC061AB26F2900BAF1BD /* ChooseBeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBFC051AB26F2900BAF1BD /* ChooseBeaconViewController.swift */; };
+		FAEBFC081AB281E100BAF1BD /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBFC071AB281E100BAF1BD /* UsersTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		FAEBFC001AB26B1800BAF1BD /* ValoresTec-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ValoresTec-Bridging-Header.h"; sourceTree = "<group>"; };
 		FAEBFC031AB26B8F00BAF1BD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		FAEBFC051AB26F2900BAF1BD /* ChooseBeaconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseBeaconViewController.swift; sourceTree = "<group>"; };
+		FAEBFC071AB281E100BAF1BD /* UsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				FAEBFBB91AB2668C00BAF1BD /* AppDelegate.swift */,
 				FAEBFBBB1AB2668C00BAF1BD /* ViewController.swift */,
 				FAEBFBBD1AB2668C00BAF1BD /* Main.storyboard */,
+				FAEBFC071AB281E100BAF1BD /* UsersTableViewController.swift */,
 				FAEBFBC01AB2668C00BAF1BD /* Images.xcassets */,
 				FAEBFBC21AB2668C00BAF1BD /* LaunchScreen.xib */,
 				FAEBFBB71AB2668C00BAF1BD /* Supporting Files */,
@@ -295,6 +298,7 @@
 			files = (
 				FAEBFC061AB26F2900BAF1BD /* ChooseBeaconViewController.swift in Sources */,
 				FAEBFBBC1AB2668C00BAF1BD /* ViewController.swift in Sources */,
+				FAEBFC081AB281E100BAF1BD /* UsersTableViewController.swift in Sources */,
 				FAEBFBBA1AB2668C00BAF1BD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
