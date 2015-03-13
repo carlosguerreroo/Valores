@@ -15,14 +15,45 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valores Tec" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAa-Mk-Q9G">
+                                <rect key="frame" x="93" y="140" width="135" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="AiF-1Y-Xu8"/>
+                                    <constraint firstAttribute="height" constant="21" id="foX-EC-typ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" red="0.9960784912109375" green="0.99215692281723022" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkF-6K-g3E">
+                                <rect key="frame" x="69" y="315" width="183" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="GpD-2r-shx"/>
+                                    <constraint firstAttribute="width" constant="183" id="Zao-nr-XV4"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="facebookLoginButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.14901961386203766" green="0.85490202903747559" blue="0.98823535442352295" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="vkF-6K-g3E" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="295" id="L5U-Wa-MHk"/>
+                            <constraint firstAttribute="centerX" secondItem="fAa-Mk-Q9G" secondAttribute="centerX" constant="-0.5" id="ZbL-NE-gNV"/>
+                            <constraint firstItem="fAa-Mk-Q9G" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="120" id="jvt-K4-Mjj"/>
+                            <constraint firstAttribute="centerX" secondItem="vkF-6K-g3E" secondAttribute="centerX" constant="-0.5" id="vuf-Fn-fBK"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129.59999999999999" y="320.92000000000002"/>
+            <point key="canvasLocation" x="129" y="320"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="facebookLoginButton" width="394" height="99"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
