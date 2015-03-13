@@ -29,6 +29,7 @@
 		FAEBFBFB1AB26AF000BAF1BD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEBFBFA1AB26AF000BAF1BD /* SystemConfiguration.framework */; };
 		FAEBFBFD1AB26AF500BAF1BD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEBFBFC1AB26AF500BAF1BD /* libz.dylib */; };
 		FAEBFBFF1AB26AFF00BAF1BD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEBFBFE1AB26AFF00BAF1BD /* libsqlite3.dylib */; };
+		FAEBFC041AB26B8F00BAF1BD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEBFC031AB26B8F00BAF1BD /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		FAEBFBFC1AB26AF500BAF1BD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		FAEBFBFE1AB26AFF00BAF1BD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		FAEBFC001AB26B1800BAF1BD /* ValoresTec-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ValoresTec-Bridging-Header.h"; sourceTree = "<group>"; };
+		FAEBFC031AB26B8F00BAF1BD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				FAEBFBF51AB26ADB00BAF1BD /* Security.framework in Frameworks */,
 				FAEBFBF31AB26AD300BAF1BD /* QuartzCore.framework in Frameworks */,
 				FAEBFBF11AB26ACD00BAF1BD /* MobileCoreServices.framework in Frameworks */,
+				FAEBFC041AB26B8F00BAF1BD /* FacebookSDK.framework in Frameworks */,
 				FAEBFBEF1AB26AC600BAF1BD /* CoreLocation.framework in Frameworks */,
 				FAEBFBED1AB26ABF00BAF1BD /* CoreGraphics.framework in Frameworks */,
 				FAEBFBEB1AB26AB700BAF1BD /* CFNetwork.framework in Frameworks */,
@@ -166,6 +169,7 @@
 		FAEBFBD91AB26A2600BAF1BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAEBFC031AB26B8F00BAF1BD /* FacebookSDK.framework */,
 				FAEBFBFE1AB26AFF00BAF1BD /* libsqlite3.dylib */,
 				FAEBFBFC1AB26AF500BAF1BD /* libz.dylib */,
 				FAEBFBFA1AB26AF000BAF1BD /* SystemConfiguration.framework */,
