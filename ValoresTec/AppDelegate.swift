@@ -21,11 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
         
         if PFUser.currentUser() != nil{
-//            let menuViewController = self.window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier("NavigationSearchController") as NavigationSearchController
-//            self.window?.rootViewController? = menuViewController
+            let menuViewController = self.window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier("ChooseBeacon") as ChooseBeaconViewController
+            self.window?.rootViewController? = menuViewController
         }
         
-
         return true
     }
 
@@ -40,10 +39,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
+        FBAppCall.handleDidBecomeActiveWithSession(PFFacebookUtils.session())
     }
 
     func applicationWillTerminate(application: UIApplication) {
     }
+    
+    func application(application: UIApplication,
+        openURL url: NSURL,
+        sourceApplication: String?,
+        annotation: AnyObject?) -> Bool {
+            return FBAppCall.handleOpenURL(url, sourceApplication:sourceApplication,
+                withSession:PFFacebookUtils.session())
+    }
+
 
 
 }

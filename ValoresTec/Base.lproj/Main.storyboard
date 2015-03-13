@@ -35,6 +35,9 @@
                                 <state key="normal" backgroundImage="facebookLoginButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginUser:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NEU-Sr-17f"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.14901961386203766" green="0.85490202903747559" blue="0.98823535442352295" alpha="1" colorSpace="deviceRGB"/>
@@ -49,6 +52,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="129" y="320"/>
+        </scene>
+        <!--Choose Beacon View Controller-->
+        <scene sceneID="V6V-Aw-5i7">
+            <objects>
+                <viewController storyboardIdentifier="ChooseBeacon" id="o3B-Ni-8xc" customClass="ChooseBeaconViewController" customModule="ValoresTec" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mkk-FQ-mhf"/>
+                        <viewControllerLayoutGuide type="bottom" id="r6L-XC-ybf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xbt-ES-mrr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UPD-W6-xuk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="519" y="320"/>
         </scene>
     </scenes>
     <resources>
