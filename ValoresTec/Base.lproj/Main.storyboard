@@ -64,7 +64,28 @@
                     <view key="view" contentMode="scaleToFill" id="Xbt-ES-mrr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buscando valor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCJ-WM-WSM">
+                                <rect key="frame" x="97" y="70" width="126.5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.9960784912109375" green="0.99215692281723022" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="values" translatesAutoresizingMaskIntoConstraints="NO" id="hWP-Hd-iT9">
+                                <rect key="frame" x="52" y="182" width="216" height="192"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="A41-Sh-glW"/>
+                                    <constraint firstAttribute="width" constant="216" id="gB8-qy-ysS"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98823535442352295" green="0.10196079313755035" blue="0.63137257099151611" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="hWP-Hd-iT9" firstAttribute="top" secondItem="FCJ-WM-WSM" secondAttribute="bottom" constant="92" id="6za-cA-eRh"/>
+                            <constraint firstAttribute="centerX" secondItem="FCJ-WM-WSM" secondAttribute="centerX" id="P2e-Ix-rLU"/>
+                            <constraint firstItem="FCJ-WM-WSM" firstAttribute="top" secondItem="mkk-FQ-mhf" secondAttribute="bottom" constant="50" id="RdB-4h-vKN"/>
+                            <constraint firstAttribute="centerX" secondItem="hWP-Hd-iT9" secondAttribute="centerX" id="inH-co-Abe"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UPD-W6-xuk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -74,6 +95,7 @@
     </scenes>
     <resources>
         <image name="facebookLoginButton" width="394" height="99"/>
+        <image name="values" width="397" height="355"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
