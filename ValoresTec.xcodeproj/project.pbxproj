@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FAA48B7C1AD9C90D00857650 /* FBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA48B7B1AD9C90D00857650 /* FBUser.swift */; };
 		FAEBFBBA1AB2668C00BAF1BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBFBB91AB2668C00BAF1BD /* AppDelegate.swift */; };
 		FAEBFBBC1AB2668C00BAF1BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBFBBB1AB2668C00BAF1BD /* ViewController.swift */; };
 		FAEBFBBF1AB2668C00BAF1BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEBFBBD1AB2668C00BAF1BD /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FAA48B7B1AD9C90D00857650 /* FBUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBUser.swift; sourceTree = "<group>"; };
 		FAEBFBB41AB2668C00BAF1BD /* ValoresTec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValoresTec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEBFBB81AB2668C00BAF1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAEBFBB91AB2668C00BAF1BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				FAEBFBB71AB2668C00BAF1BD /* Supporting Files */,
 				FAEBFC001AB26B1800BAF1BD /* ValoresTec-Bridging-Header.h */,
 				FAEBFC051AB26F2900BAF1BD /* ChooseBeaconViewController.swift */,
+				FAA48B7B1AD9C90D00857650 /* FBUser.swift */,
 			);
 			path = ValoresTec;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAEBFC061AB26F2900BAF1BD /* ChooseBeaconViewController.swift in Sources */,
+				FAA48B7C1AD9C90D00857650 /* FBUser.swift in Sources */,
 				FAEBFBBC1AB2668C00BAF1BD /* ViewController.swift in Sources */,
 				FAEBFC081AB281E100BAF1BD /* UsersTableViewController.swift in Sources */,
 				FAEBFBBA1AB2668C00BAF1BD /* AppDelegate.swift in Sources */,
@@ -504,6 +508,7 @@
 				FAEBFBD51AB2668C00BAF1BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAEBFBD61AB2668C00BAF1BD /* Build configuration list for PBXNativeTarget "ValoresTecTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +517,7 @@
 				FAEBFBD81AB2668C00BAF1BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

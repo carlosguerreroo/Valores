@@ -17,7 +17,7 @@ class UsersTableViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidLoad()
         self.usersTable.delegate = self
         self.usersTable.dataSource = self
-        self.getUsers()
+        self.searchFacebook()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,23 +25,18 @@ class UsersTableViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     
-    func getUsers(){
-        var query = PFQuery(className:"User")
-        query.findObjectsInBackgroundWithBlock {
-            (objects: [AnyObject]!, error: NSError!) -> Void in
-            if error == nil {
-                if let users = objects as? [PFObject] {
-                    for user in users {
-                        var id = user.objectId
-                        print("este es el id: \(id)")
-                        self.users.append(user)
-                    }
-                    self.usersTable.reloadData()
-                }
-            } else {
-                println("Error: \(error) \(error.userInfo!)")
-            }
-        }
+    
+    func searchFacebook() {
+        var completionHandler = {
+            connection, result, error in
+            println(result)
+            } as FBRequestHandler;
+        
+        // Request the profile info
+        FBRequestConnection.startWithGraphPath(
+            "me/friends?fields=picture,first_name,last_name",
+            completionHandler: completionHandler
+        );
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
