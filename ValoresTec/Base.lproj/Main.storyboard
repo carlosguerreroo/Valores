@@ -109,23 +109,36 @@
                                 <rect key="frame" x="0.0" y="80" width="320" height="488"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="71" id="Mjz-JT-ObQ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="71" id="Mjz-JT-ObQ" customClass="UserTableViewCell" customModule="ValoresTec" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mjz-JT-ObQ" id="6ge-qc-Jug">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PUT-ad-Q8S">
-                                                    <rect key="frame" x="24" y="10" width="62" height="52.5"/>
+                                                    <rect key="frame" x="25" y="5" width="62" height="62"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdA-TG-hSL">
-                                                    <rect key="frame" x="108" y="10" width="42" height="21"/>
+                                                    <rect key="frame" x="108" y="10" width="197" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="innovacion" translatesAutoresizingMaskIntoConstraints="NO" id="u65-Ar-x6G">
+                                                    <rect key="frame" x="206" y="42" width="25" height="25"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vision_global" translatesAutoresizingMaskIntoConstraints="NO" id="eFN-2e-KjO">
+                                                    <rect key="frame" x="239" y="42" width="25" height="25"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sentido_humano" translatesAutoresizingMaskIntoConstraints="NO" id="6WO-1r-n2P">
+                                                    <rect key="frame" x="272" y="42" width="25" height="25"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="userFullName" destination="IdA-TG-hSL" id="Qpk-6S-Pfq"/>
+                                            <outlet property="userPicture" destination="PUT-ad-Q8S" id="rBn-Md-4eI"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -153,7 +166,10 @@
     </scenes>
     <resources>
         <image name="facebookLoginButton" width="394" height="99"/>
+        <image name="innovacion" width="220" height="220"/>
+        <image name="sentido_humano" width="220" height="220"/>
         <image name="values" width="397" height="355"/>
+        <image name="vision_global" width="220" height="220"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

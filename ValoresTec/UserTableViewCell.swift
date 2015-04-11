@@ -10,9 +10,16 @@ import UIKit
 
 class UserTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var userPicture: UIImageView!
+    @IBOutlet weak var userFullName: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.userPicture.layer.cornerRadius = self.userPicture.frame.size.width/2
+        self.userPicture.clipsToBounds = true
+
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

@@ -43,10 +43,10 @@ class UsersTableViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UserTableViewCell
         var user = self.users[indexPath.row]
-//        var name: AnyObject! = user.objectId
-//        cell.textLabel!.text = "\(name)"
+        cell.userFullName.text = user.firstName + " " + user.lastName
+        cell.userPicture.image = user.picture
         return cell
     }
     
@@ -71,15 +71,45 @@ class UsersTableViewController: UIViewController, UITableViewDataSource, UITable
                 user.lastName = lastName
             }
             
-            if let picture  = friendData["picture"]["data"]["url"].string {
-                user.picture = picture
+            if let pictureUrl  = friendData["picture"]["data"]["url"].string {
+                user.pictureUrl = pictureUrl
             }
             self.users.append(user)
-        }        
-        
+        }
+        //
+        self.fetchImages()
     }
     
+    func fetchImages () {
     
+        for user in self.users {
+        
+            var imgURL: NSURL = NSURL(string: user.pictureUrl)!
+            
+            // Download an NSData representation of the image at the URL
+            let request: NSURLRequest = NSURLRequest(URL: imgURL)
+            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
+                if error == nil {
+                    user.picture = UIImage(data: data)!
+                    self.usersTable.reloadData()
+                    // Store the image in to our cache
+//                    self.imageCache[urlString] = image
+//                    dispatch_async(dispatch_get_main_queue(), {
+//                        if let cellToUpdate = tableView.cellForRowAtIndexPath(indexPath) {
+//                            cellToUpdate.imageView?.image = image
+//                        }
+//                    })
+                }
+                else {
+                    println("Error: \(error.localizedDescription)")
+                }
+            })
+        
+        }
+        
+        
+        
+    }
 
     /*
     // MARK: - Navigation

@@ -11,20 +11,16 @@ import Foundation
 
 class FBUser {
     
-    var picture : String
+    var pictureUrl : String
     var firstName : String
     var lastName : String
+    var picture : UIImage
     
-    init(picture : String, firstName : String, lastName : String) {
-        
-        self.picture = picture
-        self.firstName = firstName
-        self.lastName = lastName
-    }
     
     init () {
-        self.picture = ""
+        self.pictureUrl = ""
         self.firstName = ""
         self.lastName = ""
+        self.picture = UIImage()
     }
 }
