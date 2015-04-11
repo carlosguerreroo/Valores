@@ -11,7 +11,7 @@ import UIKit
 class UsersTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var usersTable: UITableView!
-    var users = Array<PFObject>()
+    var users = Array<FBUser>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +30,8 @@ class UsersTableViewController: UIViewController, UITableViewDataSource, UITable
         var completionHandler = {
             connection, result, error in
             
-            
-            
+            var data = NSJSONSerialization.dataWithJSONObject(result, options: .allZeros, error: nil)
+                self.deserializeFbData(data!)
             
             } as FBRequestHandler;
         
@@ -45,14 +45,40 @@ class UsersTableViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
         var user = self.users[indexPath.row]
-        var name: AnyObject! = user.objectId
-        cell.textLabel!.text = "\(name)"
+//        var name: AnyObject! = user.objectId
+//        cell.textLabel!.text = "\(name)"
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
+    
+    
+    func deserializeFbData(data : NSData) {
+        let json = JSON(data : data)
+        
+        let friends = json["data"]
+        for friend in friends {
+            
+            var friendData = friend.1
+            var user =  FBUser()
+            if let firstName = friendData["first_name"].string {
+                user.firstName = firstName
+            }
+            
+            if let lastName = friendData["last_name"].string {
+                user.lastName = lastName
+            }
+            
+            if let picture  = friendData["picture"]["data"]["url"].string {
+                user.picture = picture
+            }
+            self.users.append(user)
+        }        
+        
+    }
+    
     
 
     /*

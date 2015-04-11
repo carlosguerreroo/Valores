@@ -22,4 +22,9 @@ class FBUser {
         self.lastName = lastName
     }
     
+    init () {
+        self.picture = ""
+        self.firstName = ""
+        self.lastName = ""
+    }
 }
