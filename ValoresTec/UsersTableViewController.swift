@@ -11,26 +11,49 @@ import UIKit
 class UsersTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var usersTable: UITableView!
+    var users = Array<PFObject>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.usersTable.delegate = self
         self.usersTable.dataSource = self
-        // Do any additional setup after loading the view.
+        self.getUsers()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    func getUsers(){
+        var query = PFQuery(className:"User")
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                if let users = objects as? [PFObject] {
+                    for user in users {
+                        var id = user.objectId
+                        print("este es el id: \(id)")
+                        self.users.append(user)
+                    }
+                    self.usersTable.reloadData()
+                }
+            } else {
+                println("Error: \(error) \(error.userInfo!)")
+            }
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-        cell.textLabel!.text = "HOLA"
+        var user = self.users[indexPath.row]
+        var name: AnyObject! = user.objectId
+        cell.textLabel!.text = "\(name)"
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return users.count
     }
     
 
