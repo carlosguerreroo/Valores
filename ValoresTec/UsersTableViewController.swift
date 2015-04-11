@@ -35,7 +35,6 @@ class UsersTableViewController: UIViewController, UITableViewDataSource, UITable
             
             } as FBRequestHandler;
         
-        // Request the profile info
         FBRequestConnection.startWithGraphPath(
             "me/friends?fields=picture,first_name,last_name",
             completionHandler: completionHandler
@@ -63,6 +62,7 @@ class UsersTableViewController: UIViewController, UITableViewDataSource, UITable
             
             var friendData = friend.1
             var user =  FBUser()
+            
             if let firstName = friendData["first_name"].string {
                 user.firstName = firstName
             }
@@ -74,9 +74,14 @@ class UsersTableViewController: UIViewController, UITableViewDataSource, UITable
             if let pictureUrl  = friendData["picture"]["data"]["url"].string {
                 user.pictureUrl = pictureUrl
             }
+            
+            if let fbId = friendData["id"].string {
+                user.fbId = fbId
+            }
+
             self.users.append(user)
         }
-        //
+        
         self.fetchImages()
     }
     
@@ -86,19 +91,11 @@ class UsersTableViewController: UIViewController, UITableViewDataSource, UITable
         
             var imgURL: NSURL = NSURL(string: user.pictureUrl)!
             
-            // Download an NSData representation of the image at the URL
             let request: NSURLRequest = NSURLRequest(URL: imgURL)
             NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
                 if error == nil {
                     user.picture = UIImage(data: data)!
                     self.usersTable.reloadData()
-                    // Store the image in to our cache
-//                    self.imageCache[urlString] = image
-//                    dispatch_async(dispatch_get_main_queue(), {
-//                        if let cellToUpdate = tableView.cellForRowAtIndexPath(indexPath) {
-//                            cellToUpdate.imageView?.image = image
-//                        }
-//                    })
                 }
                 else {
                     println("Error: \(error.localizedDescription)")
@@ -106,19 +103,5 @@ class UsersTableViewController: UIViewController, UITableViewDataSource, UITable
             })
         
         }
-        
-        
-        
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

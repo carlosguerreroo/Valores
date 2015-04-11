@@ -14,6 +14,7 @@ class FBUser {
     var pictureUrl : String
     var firstName : String
     var lastName : String
+    var fbId : String
     var picture : UIImage
     var hasInnovation : Bool
     var hasHumanSense : Bool
@@ -23,6 +24,7 @@ class FBUser {
         self.pictureUrl = ""
         self.firstName = ""
         self.lastName = ""
+        self.fbId = ""
         self.picture = UIImage()
         self.hasGlobalVision = false
         self.hasHumanSense = false
