@@ -29,7 +29,10 @@ class UsersTableViewController: UIViewController, UITableViewDataSource, UITable
     func searchFacebook() {
         var completionHandler = {
             connection, result, error in
-            println(result)
+            
+            
+            
+            
             } as FBRequestHandler;
         
         // Request the profile info

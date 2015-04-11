@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FAA48B7C1AD9C90D00857650 /* FBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA48B7B1AD9C90D00857650 /* FBUser.swift */; };
+		FAA48B7E1AD9CAA400857650 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA48B7D1AD9CAA400857650 /* SwiftyJSON.swift */; };
 		FAEBFBBA1AB2668C00BAF1BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBFBB91AB2668C00BAF1BD /* AppDelegate.swift */; };
 		FAEBFBBC1AB2668C00BAF1BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBFBBB1AB2668C00BAF1BD /* ViewController.swift */; };
 		FAEBFBBF1AB2668C00BAF1BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEBFBBD1AB2668C00BAF1BD /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		FAA48B7B1AD9C90D00857650 /* FBUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBUser.swift; sourceTree = "<group>"; };
+		FAA48B7D1AD9CAA400857650 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		FAEBFBB41AB2668C00BAF1BD /* ValoresTec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValoresTec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEBFBB81AB2668C00BAF1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAEBFBB91AB2668C00BAF1BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 		FAEBFBD91AB26A2600BAF1BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAA48B7D1AD9CAA400857650 /* SwiftyJSON.swift */,
 				FAEBFC031AB26B8F00BAF1BD /* FacebookSDK.framework */,
 				FAEBFBFE1AB26AFF00BAF1BD /* libsqlite3.dylib */,
 				FAEBFBFC1AB26AF500BAF1BD /* libz.dylib */,
@@ -302,6 +305,7 @@
 				FAEBFC061AB26F2900BAF1BD /* ChooseBeaconViewController.swift in Sources */,
 				FAA48B7C1AD9C90D00857650 /* FBUser.swift in Sources */,
 				FAEBFBBC1AB2668C00BAF1BD /* ViewController.swift in Sources */,
+				FAA48B7E1AD9CAA400857650 /* SwiftyJSON.swift in Sources */,
 				FAEBFC081AB281E100BAF1BD /* UsersTableViewController.swift in Sources */,
 				FAEBFBBA1AB2668C00BAF1BD /* AppDelegate.swift in Sources */,
 			);
