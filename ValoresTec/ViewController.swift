@@ -39,12 +39,20 @@ class ViewController: UIViewController {
                 NSLog("Uh oh. The user cancelled the Facebook login.")
             } else if user.isNew {
                 NSLog("User signed up and logged in through Facebook!")
+                self.updateUser()
                 self.openChooseBadge()
             } else {
                 NSLog("User logged in through Facebook!")
                 self.openChooseBadge()
             }
         })
+    }
+    
+    func updateUser () {
+        PFUser.currentUser()["Innovation"] = false
+        PFUser.currentUser()["HumanSense"] = false
+        PFUser.currentUser()["GlobalVision"] = false
+        PFUser.currentUser().saveInBackgroundWithBlock(nil)
     }
     
 }
