@@ -15,7 +15,7 @@ class ChooseBeaconViewController: UIViewController, CLLocationManagerDelegate {
     let region =
         CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D"), identifier: "Estimotes")
     
-    let values : [String: String] = ["22512": "Inovación", "49731": "Integridad", "44456": "Sentido humano"]
+    let values : [String: String] = ["57216": "Innovación", "49231": "Integridad", "58576": "Sentido humano"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -32,8 +32,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginUser(sender: AnyObject) {
-        print("sa")
-        PFFacebookUtils.logInWithPermissions(["publish_actions"], {
+        PFFacebookUtils.logInWithPermissions(["publish_actions","user_friends"], {
             (user: PFUser!, error: NSError!) -> Void in
                         
             if user == nil {
