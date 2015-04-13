@@ -15,7 +15,7 @@ class ChooseBeaconViewController: UIViewController, CLLocationManagerDelegate {
     let region =
         CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D"), identifier: "Estimotes")
     
-    let values : [String: String] = ["57216": "Innovación", "49231": "Integridad", "58576": "Sentido humano"]
+    let values : [String: String] = ["57216": "Innovación", "49231": "Vision Global", "58576": "Sentido humano"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +50,7 @@ class ChooseBeaconViewController: UIViewController, CLLocationManagerDelegate {
         alert.addAction(UIAlertAction(title: "Si", style: UIAlertActionStyle.Default, handler: { alertAction in
             alert.dismissViewControllerAnimated(true, completion: nil)
             let vc = self.storyboard!.instantiateViewControllerWithIdentifier("UsersTable") as UsersTableViewController
+            vc.selectedValue = "\(self.values[id]!)"
             self.presentViewController(vc, animated: true, completion: nil)
         }))
         

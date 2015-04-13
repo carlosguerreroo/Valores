@@ -13,6 +13,7 @@ class UsersTableViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var usersTable: UITableView!
     var users : Dictionary <String, FBUser> = Dictionary<String, FBUser>()
     var friendsId = Array<String>()
+    var selectedValue = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,6 @@ class UsersTableViewController: UIViewController, UITableViewDataSource, UITable
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
     
     
     func searchFacebook() {
@@ -66,12 +66,29 @@ class UsersTableViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //"Innovación","Integridad","Sentido humano"]
+        var cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath) as UserTableViewCell
         var selectedUser = Array(self.users)[indexPath.row].1
         var parseSelectedUser = selectedUser.values
-        parseSelectedUser["Innovation"] = true
+        switch (self.selectedValue){
+            case "Innovación" :
+                cell.innovation.alpha = 1.0
+                parseSelectedUser["Innovation"] = true
+                break
+            case "Vision Global" :
+                cell.globalVision.alpha = 1.0
+                parseSelectedUser["GlobalVision"] = true
+                break
+            case "Sentido humano" :
+                cell.humanSense.alpha = 1.0
+                parseSelectedUser["HumanSense"] = true
+                break
+            default:
+                break
+        }
         parseSelectedUser.saveInBackgroundWithBlock { (saved, error) -> Void in
-            if (error != nil) {
-                print(error)
+            if (error == nil) {
+                self.usersTable.reloadData()
             }
         }
         print(parseSelectedUser)
@@ -107,7 +124,6 @@ class UsersTableViewController: UIViewController, UITableViewDataSource, UITable
             if let fbId = friendData["id"].string {
                 user.fbId = fbId
                 friendsId.append(fbId)
-                print(fbId)
                 self.users[fbId] = user
             }
 
