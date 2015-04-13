@@ -19,6 +19,7 @@ class FBUser {
     var hasInnovation : Bool
     var hasHumanSense : Bool
     var hasGlobalVision: Bool
+    var values : PFObject
     
     init () {
         self.pictureUrl = ""
@@ -29,5 +30,6 @@ class FBUser {
         self.hasGlobalVision = false
         self.hasHumanSense = false
         self.hasInnovation = false
+        self.values = PFObject(className: "Values")
     }
 }

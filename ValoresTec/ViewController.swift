@@ -40,8 +40,8 @@ class ViewController: UIViewController {
             } else if user.isNew {
                 NSLog("User signed up and logged in through Facebook!")
                 self.getFacebookInformation()
-                self.updateUser()
                 self.openChooseBadge()
+
             } else {
                 NSLog("User logged in through Facebook!")
                 self.getFacebookInformation()
@@ -68,14 +68,16 @@ class ViewController: UIViewController {
         var facebookId = json ["id"]
         PFUser.currentUser()["facebookId"] = facebookId.string
         PFUser.currentUser().saveInBackgroundWithBlock(nil)
-    }
-    
-    func updateUser () {
-        PFUser.currentUser()["Innovation"] = false
-        PFUser.currentUser()["HumanSense"] = false
-        PFUser.currentUser()["GlobalVision"] = false
-
-        PFUser.currentUser().saveInBackgroundWithBlock(nil)
+        
+        var values = PFObject(className: "Values")
+        values["Innovation"] = false
+        values["HumanSense"] = false
+        values["GlobalVision"] = false
+        values["FacebookId"] = facebookId.string
+        values["User"] = PFUser.currentUser()
+        values.saveInBackgroundWithBlock{ (success: Bool, error: NSError!) -> Void in
+            println("Object has been saved.")
+        }
     }
     
 }

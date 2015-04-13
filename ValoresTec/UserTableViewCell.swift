@@ -12,6 +12,9 @@ class UserTableViewCell: UITableViewCell {
 
     @IBOutlet weak var userPicture: UIImageView!
     @IBOutlet weak var userFullName: UILabel!
+    @IBOutlet weak var innovation: UIImageView!
+    @IBOutlet weak var globalVision: UIImageView!
+    @IBOutlet weak var humanSense: UIImageView!
     
     
     override func awakeFromNib() {

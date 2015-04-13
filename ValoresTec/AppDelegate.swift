@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
         
         if PFUser.currentUser() != nil{
-//            let menuViewController = self.window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier("ChooseBeacon") as ChooseBeaconViewController
-             let menuViewController = self.window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier("UsersTable") as UsersTableViewController
+            let menuViewController = self.window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier("ChooseBeacon") as ChooseBeaconViewController
+//             let menuViewController = self.window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier("UsersTable") as UsersTableViewController
             self.window?.rootViewController? = menuViewController
         }
         

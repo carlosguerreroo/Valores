@@ -109,7 +109,7 @@
                                 <rect key="frame" x="0.0" y="80" width="320" height="488"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="71" id="Mjz-JT-ObQ" customClass="UserTableViewCell" customModule="ValoresTec" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="71" id="Mjz-JT-ObQ" customClass="UserTableViewCell" customModule="ValoresTec" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mjz-JT-ObQ" id="6ge-qc-Jug">
@@ -136,6 +136,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="globalVision" destination="eFN-2e-KjO" id="Ue0-Sm-9EX"/>
+                                            <outlet property="humanSense" destination="6WO-1r-n2P" id="MNA-P3-qVm"/>
+                                            <outlet property="innovation" destination="u65-Ar-x6G" id="aN0-62-lEl"/>
                                             <outlet property="userFullName" destination="IdA-TG-hSL" id="Qpk-6S-Pfq"/>
                                             <outlet property="userPicture" destination="PUT-ad-Q8S" id="rBn-Md-4eI"/>
                                         </connections>
