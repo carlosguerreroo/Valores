@@ -66,7 +66,7 @@ class UsersTableViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //"Innovación","Integridad","Sentido humano"]
+        
         var cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath) as UserTableViewCell
         var selectedUser = Array(self.users)[indexPath.row].1
         var parseSelectedUser = selectedUser.values

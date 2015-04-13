@@ -61,4 +61,8 @@ class ChooseBeaconViewController: UIViewController, CLLocationManagerDelegate {
 
         self.presentViewController(alert, animated: true, completion: nil)
     }
+    
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+        
+    }
 }
