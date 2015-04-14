@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        application.statusBarHidden = true
         Parse.setApplicationId("S9M8GvHaVy4F8z79tgxmXcOCuTh0B7GXt14cYLHD", clientKey: "duxFXqnpNwtizDCHYfGCLG8HEew1Lh1Hzhrao95d")
         var object = PFObject(className: "testDataClass")
         PFFacebookUtils.initializeFacebook()
